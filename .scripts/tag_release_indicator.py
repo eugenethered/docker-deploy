@@ -40,6 +40,6 @@ if __name__ == '__main__':
     current_version = get_current_version()
     released_version = get_released_version(current_version)
     if normalize_version(current_version) > normalize_version(released_version):
-        print('RELEASE_TO_DOCKER_REGISTRY=false')
+        print('RELEASE_TO_DOCKER_REGISTRY=true')
     else:
         print('RELEASE_TO_DOCKER_REGISTRY=false')
