@@ -21,6 +21,7 @@ jobs:
     - name: Check CURRENT vs RELEASED version
       run: |
         echo | python .scripts/tag_release_indicator.py >> $GITHUB_ENV
+        echo | python .scripts/namespace_info.py >> $GITHUB_ENV
         echo | python .scripts/repository_info.py >> $GITHUB_ENV
         echo | python .scripts/tag_info.py >> $GITHUB_ENV
     - name: Set up QEMU
@@ -46,4 +47,4 @@ jobs:
         builder: ${{ steps.buildx.outputs.name }}
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: persuadertechnology/${{ env.RELEASE_DOCKER_REPOSITORY }}:${{ env.RELEASE_DOCKER_TAG }}
+        tags: ${{ env.RELEASE_DOCKER_NAMESPACE }}/${{ env.RELEASE_DOCKER_REPOSITORY }}:${{ env.RELEASE_DOCKER_TAG }}
