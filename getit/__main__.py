@@ -10,6 +10,6 @@ def get_website_from_environment_var():
 
 if __name__ == '__main__':
     website = get_website_from_environment_var()
-    print(f'Getting the title from website:${website}')
+    print(f'Getting the title from website:[${website}]')
     (status, title) = get_title_from_website(website)
     print(f'Title: {title} [{status}]')

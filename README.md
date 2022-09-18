@@ -13,3 +13,7 @@ Example of how to deploy docker container.
 ## Docker Hub with existing tag
 1. Run `./docker-image-tag-info.sh` (simulation/docker/api). Should have this output:
 2. Within the repose there should be `"tag_status": "active"` & `tag_last_pushed`
+
+## Run the docker image
+1. `docker run -it --rm persuadertechnology/getit:0.2`
+2. `docker run -it --rm -e WEBSITE='https://yahoo.com' persuadertechnology/getit:0.2`
