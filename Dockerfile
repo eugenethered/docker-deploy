@@ -13,6 +13,6 @@ COPY --from=BUILDER /usr/local/lib/python3.10/site-packages/ /usr/local/lib/pyth
 COPY --chown=apprunner:apprunner ./getit ./getit
 
 ENV PYTHONPATH="${PYTHONPATH}:/app/getit" \
-    WEBSITE=https://google.com \
+    WEBSITE=https://google.com
 
 CMD ["python", "getit/__main__.py"]
