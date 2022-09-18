@@ -1,2 +1,4 @@
-# docker-deploy
-Docker Deploy
+# Docker Deploy
+Example of how to deploy docker container.
+
+
